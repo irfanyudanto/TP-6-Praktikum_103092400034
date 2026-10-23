@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>NIM_Soal1</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        form {
+            width: 400px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #70c3d7;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 18px 40px;
+            border-radius: 7px;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 3px solid #ddd;
+            padding: 5px 0 12px;
+            font-size: 22px;
+            outline: none;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="nim">NIM</label>
+                <input type="text" id="nim" readonly>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        window.onload = function() {
+            var nama = prompt("Masukkan nama kamu:");
+            var nim = prompt("Masukkan nim kamu:");
+
+            if (nama !== null) {
+                document.getElementById("nama").value = nama;
+            }
+
+            if (nim !== null) {
+                document.getElementById("nim").value = nim;
+            }
+        };
+    </script>
+</body>
+</html>

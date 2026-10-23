@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bermain dengan Warna</title>
+
+    <!-- Import library jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .container {
+            width: 240px;
+            min-height: 210px;
+            margin: 20px auto;
+            padding: 12px;
+            text-align: center;
+            background-color: #eff8ff;
+        }
+
+        h1 {
+            margin: 4px 0 14px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        button {
+            border: none;
+            border-radius: 2px;
+            padding: 5px 11px;
+            margin: 0 3px;
+            font-size: 7px;
+            cursor: pointer;
+        }
+
+        #tombolUngu {
+            color: white;
+            background-color: #7c3aed;
+        }
+
+        #tombolBiru {
+            color: white;
+            background-color: #2563eb;
+        }
+
+        #tombolHijau {
+            color: white;
+            background-color: #15803d;
+        }
+
+        #kotakWarna {
+            width: 86px;
+            height: 86px;
+            margin: 13px auto;
+            background-color: #15803d;
+            border: 1px solid #333;
+            border-radius: 4px;
+        }
+
+        .kontrol-kotak {
+            margin-top: 10px;
+        }
+
+        .kontrol-kotak button {
+            color: #222;
+            background-color: #eeeeee;
+        }
+
+        p {
+            font-size: 7px;
+            margin: 9px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bermain dengan Warna</h1>
+
+        <div>
+            <button id="tombolUngu">Ungu</button>
+            <button id="tombolBiru">Biru</button>
+            <button id="tombolHijau">Hijau</button>
+        </div>
+
+        <div id="kotakWarna"></div>
+
+        <div class="kontrol-kotak">
+            <button id="sembunyikanKotak">
+                Sembunyikan Kotak
+            </button>
+
+            <button id="tampilkanKotak">
+                Tampilkan Kotak
+            </button>
+        </div>
+
+        <p>Klik tombol warna untuk mengubah warna kotak.</p>
+        <p>
+            Gunakan tombol Sembunyikan dan Tampilkan
+            untuk menyembunyikan dan menampilkan kotak.
+        </p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+
+            // Mengubah warna kotak menjadi ungu
+            $("#tombolUngu").click(function() {
+                $("#kotakWarna").css(
+                    "background-color", "blueviolet"
+                );
+            });
+
+            // Mengubah warna kotak menjadi biru
+            $("#tombolBiru").click(function() {
+                $("#kotakWarna").css(
+                    "background-color", "royalblue"
+                );
+            });
+
+            // Mengubah warna kotak menjadi hijau
+            $("#tombolHijau").click(function() {
+                $("#kotakWarna").css(
+                    "background-color", "seagreen"
+                );
+            });
+
+            // Menyembunyikan kotak
+            $("#sembunyikanKotak").click(function() {
+                $("#kotakWarna").hide();
+            });
+
+            // Menampilkan kembali kotak
+            $("#tampilkanKotak").click(function() {
+                $("#kotakWarna").show();
+            });
+
+        });
+    </script>
+</body>
+</html>
